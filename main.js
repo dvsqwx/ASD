@@ -1,20 +1,20 @@
 'use strict';
 
 const DIR_THEME = {
-    edge: '#38bdf8',
-    nodeFill: '#0c1a2e',
-    nodeStroke: '#38bdf8',
-    nodeText: '#e0f2fe',
+    edge: '#000',
+    nodeFill: '#fff',
+    nodeStroke: '#000',
+    nodeText: '#000',
 };
 
 const UNDIR_THEME = {
-    edge: '#a78bfa',
-    nodeFill: '#130c2e',
-    nodeStroke: '#a78bfa',
-    nodeText: '#ede9fe',
+    edge: '#000',
+    nodeFill: '#fff',
+    nodeStroke: '#000',
+    nodeText: '#000',
 };
 
-function renderMatrixTable(tableEl, matrix, color) {
+function renderMatrixTable(tableEl, matrix) {
     tableEl.innerHTML = '';
     matrix.forEach(row => {
         const tr = document.createElement('tr');
@@ -22,7 +22,6 @@ function renderMatrixTable(tableEl, matrix, color) {
             const td = document.createElement('td');
             td.textContent = val;
             td.className = val ? 'cell-one' : 'cell-zero';
-            td.style.setProperty('--accent', color);
             tr.appendChild(td);
         });
         tableEl.appendChild(tr);
@@ -48,8 +47,8 @@ function build() {
     renderGraph(dirCanvas,   n, n4, Adir,   true,  DIR_THEME);
     renderGraph(undirCanvas, n, n4, Aundir, false, UNDIR_THEME);
 
-    renderMatrixTable(document.getElementById('matrix-dir'),   Adir,   '#38bdf8');
-    renderMatrixTable(document.getElementById('matrix-undir'), Aundir, '#a78bfa');
+    renderMatrixTable(document.getElementById('matrix-dir'),   Adir);
+    renderMatrixTable(document.getElementById('matrix-undir'), Aundir);
 
     document.getElementById('results').style.display = 'block';
 }
