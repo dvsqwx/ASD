@@ -10,7 +10,6 @@
 <div class="container">
 
   <header class="header">
-    <div class="header-label">Лабораторна робота 3</div>
     <h1>Графічне представлення графів</h1>
   </header>
 
@@ -19,16 +18,10 @@
       <label for="variant-input">ВАРІАНТ n₁n₂n₃n₄</label>
       <input id="variant-input" type="text" maxlength="4" placeholder="0000" />
     </div>
-    <button id="build-btn">▶ ПОБУДУВАТИ</button>
+    <button id="build-btn">ПОБУДУВАТИ</button>
     <span id="error-msg"></span>
   </div>
-
-  <div id="info-bar">
-    <span><span class="info-label">n (вершин): </span><span id="info-n"  class="info-value"></span></span>
-    <span><span class="info-label">k (коеф.): </span> <span id="info-k"  class="info-value"></span></span>
-    <span><span class="info-label">seed: </span>       <span id="info-seed"   class="info-value"></span></span>
-    <span><span class="info-label">розміщення: </span> <span id="info-layout" class="info-value"></span></span>
-  </div>
+  
 
   <div id="results">
 
@@ -45,11 +38,11 @@
 
     <div class="matrices-grid">
       <div class="matrix-card dir">
-        <div class="card-title">Матриця суміжності A_dir (напрямлений)</div>
+        <div class="card-title">Матриця суміжності A_dir</div>
         <table><tbody id="matrix-dir"></tbody></table>
       </div>
       <div class="matrix-card undir">
-        <div class="card-title">Матриця суміжності A_undir (ненапрямлений)</div>
+        <div class="card-title">Матриця суміжності A_undir</div>
         <table><tbody id="matrix-undir"></tbody></table>
       </div>
     </div>
