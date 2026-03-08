@@ -86,6 +86,7 @@ body {
 #info-bar .info-value { color: #f1f5f9; font-weight: 700; }
 
 #results { display: none; }
+#info-bar { display: none; }
 
 .graphs-grid {
     display: grid;
