@@ -1,13 +1,5 @@
 'use strict';
 
-const PLACEMENT_LABELS = [
-    'Коло', 'Коло',
-    'Прямокутник', 'Прямокутник',
-    'Трикутник', 'Трикутник',
-    'Коло + центр', 'Коло + центр',
-    'Прямокутник + центр', 'Прямокутник + центр',
-];
-
 const DIR_THEME = {
     edge: '#38bdf8',
     nodeFill: '#0c1a2e',
@@ -50,12 +42,6 @@ function build() {
     errorEl.style.display = 'none';
 
     const { n4, seed, n, k, Adir, Aundir } = result;
-
-    document.getElementById('info-n').textContent = n;
-    document.getElementById('info-k').textContent = k.toFixed(4);
-    document.getElementById('info-seed').textContent = seed;
-    document.getElementById('info-layout').textContent = PLACEMENT_LABELS[n4];
-    document.getElementById('info-bar').style.display = 'flex';
 
     const dirCanvas = document.getElementById('canvas-dir');
     const undirCanvas = document.getElementById('canvas-undir');
