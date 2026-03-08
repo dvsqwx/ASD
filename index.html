@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>laboratory-3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+
+  <header class="header">
+    <div class="header-label">Лабораторна робота 3</div>
+    <h1>Графічне представлення графів</h1>
+  </header>
+
+  <div class="controls">
+    <div class="input-group">
+      <label for="variant-input">ВАРІАНТ n₁n₂n₃n₄</label>
+      <input id="variant-input" type="text" maxlength="4" placeholder="0000" />
+    </div>
+    <button id="build-btn">▶ ПОБУДУВАТИ</button>
+    <span id="error-msg"></span>
+  </div>
+
+  <div id="info-bar">
+    <span><span class="info-label">n (вершин): </span><span id="info-n"  class="info-value"></span></span>
+    <span><span class="info-label">k (коеф.): </span> <span id="info-k"  class="info-value"></span></span>
+    <span><span class="info-label">seed: </span>       <span id="info-seed"   class="info-value"></span></span>
+    <span><span class="info-label">розміщення: </span> <span id="info-layout" class="info-value"></span></span>
+  </div>
+
+  <div id="results">
+
+    <div class="graphs-grid">
+      <div class="graph-card dir">
+        <div class="card-title">Напрямлений граф (A_dir)</div>
+        <canvas id="canvas-dir" width="540" height="460"></canvas>
+      </div>
+      <div class="graph-card undir">
+        <div class="card-title">Ненапрямлений граф (A_undir)</div>
+        <canvas id="canvas-undir" width="540" height="460"></canvas>
+      </div>
+    </div>
+
+    <div class="matrices-grid">
+      <div class="matrix-card dir">
+        <div class="card-title">Матриця суміжності A_dir (напрямлений)</div>
+        <table><tbody id="matrix-dir"></tbody></table>
+      </div>
+      <div class="matrix-card undir">
+        <div class="card-title">Матриця суміжності A_undir (ненапрямлений)</div>
+        <table><tbody id="matrix-undir"></tbody></table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="matrix.js"></script>
+<script src="graph.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
